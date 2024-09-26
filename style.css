@@ -1,0 +1,63 @@
+body {
+    padding: 20px;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+input[type="time"] {
+    width: 100%;
+}
+
+/* Estilos para responsividade em telas menores */
+@media (max-width: 576px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #dee2e6;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    td {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    td:last-child {
+        border-bottom: none;
+    }
+
+    /* Rótulos ao lado dos inputs */
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 40%;
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    /* Ajuste específico para a coluna de Horas Totais do Dia */
+    td.total {
+        justify-content: flex-end;
+    }
+
+    td.total::before {
+        content: "Horas Totais do Dia:";
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+}
